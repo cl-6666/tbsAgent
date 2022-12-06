@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.maxvision.tbs">
+
+    <application android:networkSecurityConfig="@xml/tbs_network_config">
+        <activity
+            android:name=".ui.TbsActivity"
+            android:exported="false" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" /> <!-- 文件预览需要设置FileProvider，以及xml资源文件 -->
+        <provider
+            android:name="com.tencent.smtt.utils.FileProvider"
+            android:authorities="com.tencent.tbs.demo.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/tbs_file_paths" />
+        </provider> <!-- 文件预览需要设置FileProvider，以及xml资源文件 -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <service
+            android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
+            android:label="dexopt"
+            android:process=":dexopt" />
+    </application>
+
+</manifest>
