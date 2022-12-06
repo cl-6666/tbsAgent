@@ -35,8 +35,11 @@ dependencies {
    //初始化tbs，默认标题是返回
    TbsUtils.init(this,"我是返回");
    
-   //使用
+   //需要内容使用
   TbsUtils.loadFileType(this,filePath,"我是标题");
+  
+   //无需标题
+  TbsUtils.loadFileType(this,filePath);
 ```  
 
 ## 作者博客地址    
