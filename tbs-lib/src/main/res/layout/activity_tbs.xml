@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:title="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.TbsActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <com.maxvision.tbs.widget.TbsTitleView
+        android:id="@+id/title_main"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/cardview_shadow_start_color"
-        android:gravity="center"
-        android:text="返回"
-        android:textSize="20dp"
-        android:onClick="onClickClose"
+        android:background="#0093fe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        title:left_text="返回"
+        title:left_text_drawable_left="@drawable/tbs_ic_baseline_arrow_back"
+        title:small_text_size="15sp"
+        title:title_name="标题"
+        title:title_text_color="@android:color/white"
+        title:title_text_size="20sp" />
 
-    <com.maxvision.tbs.widget.FileReaderView
-        android:id="@+id/documentReaderView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <com.maxvision.tbs.widget.FileReaderView
+            android:id="@+id/documentReaderView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

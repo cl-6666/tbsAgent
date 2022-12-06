@@ -50,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.tv_start).setOnClickListener(view -> {
              //弹出保存图片的对话框
             new AlertDialog.Builder(MainActivity.this)
-                    .setItems(new String[]{"加载word文档", "加载txt文件", "加载表格文档", "加载ppt文件", "加载pdf文件"},
+                    .setItems(new String[]{"加载word文档", "加载excel文件", "加载pdf", "加载ppt文件", "加载txt文件"},
                             (dialog, which) -> {
                                 switch (which) {
                                     case 1:
                                         filePath = getFilePath(1);
-                                        TbsUtils.loadFileType(this,filePath);
+                                        TbsUtils.loadFileType(this,filePath,"我是标题");
                                         break;
                                     case 2:
                                         filePath = getFilePath(2);
@@ -67,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
                                         break;
                                     case 4:
                                         filePath = getFilePath(4);
+                                        TbsUtils.loadFileType(this,filePath);
+                                        break;
+                                    case 5:
+                                        filePath = getFilePath(5);
                                         TbsUtils.loadFileType(this,filePath);
                                         break;
                                     default:
@@ -99,11 +103,9 @@ public class MainActivity extends AppCompatActivity {
             case 3:
                 path = getFilesDir().getAbsolutePath() + File.separator +"TestPPT.ppt";
                 break;
-
             case 4:
-                path = getFilesDir().getAbsolutePath() + File.separator +"test.pdf";
+                path = getFilesDir().getAbsolutePath() + File.separator +"TestTXT.txt";
                 break;
-
             default:
                 break;
         }
@@ -118,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
         copyAssetsFileToAppFiles(path + "TestExcel.xls", "TestExcel.xls");
         copyAssetsFileToAppFiles(path + "TestPDF.pdf", "TestPDF.pdf");
         copyAssetsFileToAppFiles(path + "TestPPT.ppt", "TestPPT.ppt");
+        copyAssetsFileToAppFiles(path + "TestPPT.ppt", "TestTXT.txt");
+
     }
 
 

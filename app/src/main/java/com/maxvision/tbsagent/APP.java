@@ -15,7 +15,7 @@ public class APP extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        //初始化tbs
-        TbsUtils.init(this);
+        //初始化tbs，默认标题是返回
+        TbsUtils.init(this,"我是返回");
     }
 }

@@ -22,6 +22,9 @@ public final class TbsUtils {
     /** Application 对象*/
     private static Application sApplication;
 
+    /** 标题返回自定义命名*/
+    private static String mTitle;
+
     /** tbs是否加载完成判断*/
     private static boolean tbsLoad = false;
 
@@ -36,6 +39,12 @@ public final class TbsUtils {
      */
     public static void init(Application application) {
         sApplication = application;
+        initTbs();
+    }
+
+    public static void init(Application application, String title) {
+        sApplication = application;
+        mTitle = title;
         initTbs();
     }
 
@@ -101,6 +110,15 @@ public final class TbsUtils {
 
 
     public static void loadFileType(Context context, String localPath){
+        skipTextBrowsing(context,localPath,"");
+    }
+
+    public static void loadFileType(Context context, String localPath, String contentTitle) {
+        skipTextBrowsing(context,localPath,contentTitle);
+    }
+
+
+    private static void skipTextBrowsing(Context context, String localPath,String contentTitle){
         if (TextUtils.isEmpty(localPath)){
             Log.e(TAG, "localPath不能为空！");
             return;
@@ -109,7 +127,7 @@ public final class TbsUtils {
             Log.e(TAG, "TBS内部加载失败！");
             return;
         }
-        TbsActivity.viewFile(context,localPath);
+        TbsActivity.viewFile(context,localPath,contentTitle);
     }
 
 
@@ -120,4 +138,10 @@ public final class TbsUtils {
         return sApplication != null && tbsLoad;
     }
 
+    /**
+     * 标题
+     */
+    public static String getmTitle() {
+        return mTitle;
+    }
 }
