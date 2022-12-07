@@ -4,7 +4,7 @@
 # 效果图  
 
 版本更新历史：  
-[![](https://jitpack.io/v/cl-6666/serialPort.svg)](https://jitpack.io/#cl-6666/serialPort) 
+[![](https://jitpack.io/v/cl-6666/tbsAgent.svg)](https://jitpack.io/#cl-6666/tbsAgent)
 
 - v1.0.0：(2022年12月06日)
   - 第一代版本sdk提交  
