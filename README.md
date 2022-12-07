@@ -6,9 +6,27 @@
 版本更新历史：  
 [![](https://jitpack.io/v/cl-6666/serialPort.svg)](https://jitpack.io/#cl-6666/serialPort) 
 
-- v3.0.0：(2021年10月20日)
+- v1.0.0：(2022年12月06日)
   - 第一代版本sdk提交  
   - 支持wps、word、tts、图片等等浏览
+  
+ 
+ 
+------  
+  `V1.0.0`功能列表 | 是否支持 |
+--------|------|
+是否支持标题自定义 | 支持  |
+是否支持pdf | 支持  |
+是否支持word | 支持  |
+是否支持图片 | 支持 |
+是否支持ppt | 支持  |
+是否支持txt | 支持  |
+
+
+------  
+# 下载体验  
+
+
 
 # 项目依赖
 ``` 
@@ -24,8 +42,22 @@ Step 2. Add the dependency
 
 ``` 
 dependencies {
-  //开发中
+  //依赖添加
+  implementation 'com.github.cl-6666:tbsAgent:v1.0.0'
 }
+```  
+
+# 使用方式  
+
+```  
+   //初始化tbs，默认标题是返回
+   TbsUtils.init(this,"我是返回");
+   
+   //需要内容使用
+  TbsUtils.loadFileType(this,filePath,"我是标题");
+  
+   //无需标题
+  TbsUtils.loadFileType(this,filePath);
 ```  
 
 ## 作者博客地址    
