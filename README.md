@@ -56,7 +56,7 @@ dependencies {
    //初始化tbs，默认标题是返回
    TbsUtils.init(this,"我是返回");
    
-   //需要内容使用
+   //需要内容使用，filePath为路径比如：/data/user/0/...../files/TestDoc.doc
   TbsUtils.loadFileType(this,filePath,"我是标题");
   
    //无需标题
