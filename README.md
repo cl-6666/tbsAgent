@@ -10,8 +10,6 @@
   - 第一代版本sdk提交  
   - 支持wps、word、tts、图片等等浏览
   
- 
- 
 ------  
   `V1.0.0`功能列表 | 是否支持 |
 --------|------|
@@ -22,10 +20,15 @@
 是否支持ppt | 支持  |
 是否支持txt | 支持  |
 
+------  
+# 屏幕截图    
+<img src="https://github.com/cl-6666/tbsAgent/blob/master/img/img1.png"><img/><br/>
+<img src="https://github.com/cl-6666/tbsAgent/blob/master/img/img2.png"><img/><br/>
 
 ------  
 # 下载体验  
-
+<img src="https://github.com/cl-6666/tbsAgent/blob/master/img/QRCode_420.png"><img/><br/>
+因为图方便，用手机浏览器扫码可下载
 
 
 # 项目依赖
