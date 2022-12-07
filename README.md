@@ -22,8 +22,8 @@
 
 ------  
 # 屏幕截图    
-<img src="https://github.com/cl-6666/tbsAgent/blob/master/img/img1.png"><img/><br/>
-<img src="https://github.com/cl-6666/tbsAgent/blob/master/img/img2.png"><img/><br/>
+
+<img src="https://github.com/cl-6666/tbsAgent/blob/master/img/img1.png" width=280/><img src="https://github.com/cl-6666/tbsAgent/blob/master/img/img2.png" width=280/> 
 
 ------  
 # 下载体验  
